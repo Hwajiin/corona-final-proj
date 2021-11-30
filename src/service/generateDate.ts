@@ -1,5 +1,5 @@
 // yyyymmdd 형식으로 변환해주기 위한 두 가지 종류의 함수
-const generateDate = () => {
+const generateTodayDate = () => {
   const date = new Date();
   const year = date.getFullYear();
   const month = date.getMonth() + 1;
@@ -16,4 +16,4 @@ const altGenterateDate = () => {
     .join("");
 };
 
-export default generateDate;
+export default generateTodayDate;
