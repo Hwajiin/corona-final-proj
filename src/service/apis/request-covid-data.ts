@@ -1,7 +1,7 @@
 import axios from "axios";
-import generateDate from "./generateDate";
+import generateTodayDate from "../generateDate";
 
-const date = generateDate();
+const date = generateTodayDate();
 
 export interface AxiosConfig {
   baseURL: string;
