@@ -5,7 +5,7 @@ const fonts = {
 
   size: {
     sm: "12px",
-    md: "14px",
+    md: "16px",
     lg: "18px",
     xl: "24px",
   },
