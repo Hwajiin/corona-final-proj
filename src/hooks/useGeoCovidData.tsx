@@ -6,13 +6,14 @@ const useGeoCovidData = (sidoArray: any[], geoData: string) => {
   const getGeoCovidData = () => {
     if (sidoArray && geoData) {
       const data = sidoArray.filter((item) => geoData.includes(item.gubun));
+
       setGeoCovidData(data);
     }
   };
 
   useEffect(() => {
     getGeoCovidData();
-  }, []);
+  }, [sidoArray, geoData]);
 
   return geoCovidData;
 };
