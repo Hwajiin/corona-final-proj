@@ -16,7 +16,7 @@ const makeOpenApiAxiosInstance = (
   endCreateDt: string = date
 ) => {
   const openApiConfig: AxiosConfig = {
-    baseURL: "http://openapi.data.go.kr/openapi/service/rest/Covid19",
+    baseURL: "/openapi/service/rest/Covid19",
     params: {
       serviceKey: process.env.REACT_APP_OPEN_API_KEY,
       pageNo: 1,
