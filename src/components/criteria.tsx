@@ -9,12 +9,13 @@ interface CriteriaProps {
 
 const SCriteria = styled.p`
   font-size: ${fonts.size.sm};
+  margin-bottom: 15px;
 `;
 
 const Criteria: React.FC<CriteriaProps> = ({ stdDay, unit }) => {
   return (
     <SCriteria>
-      ({stdDay ? stdDay : "-"} 기준{unit && `, 단위: ${unit}`})
+      &#40;{`${stdDay ? stdDay : "-"} 기준${unit && `, 단위: ${unit}`}`}&#41;
     </SCriteria>
   );
 };
