@@ -29,16 +29,21 @@ ChartJS.register(
 );
 
 const options = {
-  responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
       position: "top" as const,
     },
     datalabels: {
       display: true,
-      color: "#fff",
+      color: "#000",
     },
   },
+};
+
+const style = {
+  width: "100%",
+  height: "100%",
 };
 
 const TotalDefChart: React.FC<TotalDefChartProps> = ({
@@ -57,12 +62,12 @@ const TotalDefChart: React.FC<TotalDefChartProps> = ({
       {
         label: "확진자 수",
         data: defCntData?.reverse(),
-        backgroundColor: "rgba(99, 122, 255, 0.5)",
+        backgroundColor: "rgba(41, 143, 255, 0.5)",
       },
     ],
   };
 
-  return <Bar options={options} data={data} />;
+  return <Bar options={options} data={data} style={style} />;
 };
 
 export default TotalDefChart;
