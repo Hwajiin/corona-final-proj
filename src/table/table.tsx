@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import responsive from "../base/constants/responsive";
 import Spinner from "../components/spinner";
 import { CovidDataType } from "../layouts/sidoCovid";
 import Body from "./body";
@@ -13,10 +12,6 @@ interface TableProps {
 const STable = styled.table`
   width: 100%;
   border-collapse: collapse;
-
-  ${responsive.device["above-tablet"]} {
-    width: 80%;
-  }
 `;
 
 const Table: React.FC<TableProps> = ({ sidoCovidDataOfToday }) => {
