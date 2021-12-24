@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import colors from "../base/constants/colors";
+import fonts from "../base/constants/fonts";
+import responsive from "../base/constants/responsive";
 import whitespace from "../base/constants/whitespace";
 import { CovidDataType } from "../layouts/sidoCovid";
 
@@ -17,9 +19,14 @@ const Tr = styled.tr``;
 const Td = styled.td`
   padding: ${whitespace.padding.sm}px 0;
   border-bottom: 1px solid ${colors.variable.gray};
+  font-size: ${fonts.size.sm};
 
   &:nth-child(3) {
     color: ${colors.variable.red};
+  }
+
+  ${responsive.device["above-tablet"]} {
+    font-size: ${fonts.size.md};
   }
 `;
 
