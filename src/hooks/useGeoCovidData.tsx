@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { CovidDataType } from "../layouts/sidoCovid";
 
-const useGeoCovidData = (sidoArray: any[], geoData: string) => {
+const useGeoCovidData = (sidoArray: CovidDataType[], geoData: string) => {
   const [geoCovidData, setGeoCovidData] = useState({});
 
   const getGeoCovidData = () => {
