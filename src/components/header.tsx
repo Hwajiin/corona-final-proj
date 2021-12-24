@@ -11,19 +11,18 @@ import Row from "../layouts/grids/row";
 
 const SHeader = styled.header`
   height: 60px;
-  background-color: ${colors.variable.blue};
+  background-color: ${colors.variable["blue-dark"]};
   ${flexbox()}
 `;
 
 const Title = styled.h1`
   display: inline-block;
   color: ${colors.variable.white};
-  font-size: ${fonts.size.lg};
+  font-size: ${fonts.size.md};
   font-weight: 600;
   margin-left: ${whitespace.padding.lg}px;
 
   ${responsive.device["above-tablet"]} {
-    margin-left: 0px;
     font-size: ${fonts.size.xl};
   }
 `;
