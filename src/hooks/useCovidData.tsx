@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import makeOpenApiAxiosInstance from "../service/apis/request-covid-data";
 import generateDate from "../service/generateDate";
 
