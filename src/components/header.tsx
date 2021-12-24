@@ -10,7 +10,7 @@ import Container from "../layouts/grids/container";
 import Row from "../layouts/grids/row";
 
 const SHeader = styled.header`
-  height: 70px;
+  height: 60px;
   background-color: ${colors.variable.blue};
   ${flexbox()}
 `;
@@ -34,7 +34,7 @@ const Header = () => {
       <Container>
         <Row>
           <Col sm={4}>
-            <Title>코로나바이러스감염증-19(COVID-19)</Title>
+            <Title>코로나바이러스감염증-19&#40;COVID-19&#41;</Title>
           </Col>
         </Row>
       </Container>
