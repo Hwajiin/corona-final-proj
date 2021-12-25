@@ -8,6 +8,8 @@ interface CriteriaProps {
 }
 
 const SCriteria = styled.p`
+  display: inline-block;
+  width: 100%;
   font-size: ${fonts.size.sm};
   margin-bottom: 15px;
 `;
