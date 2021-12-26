@@ -51,7 +51,14 @@ const TotalDefChart: React.FC<TotalDefChartProps> = ({
 }) => {
   const labels = totalDefCntOfWeekData?.map((item) => {
     const date = new Date(item.createDt);
-    return `${date.getMonth() + 1}.${date.getDate()}`;
+
+    if (isNaN(date.getMonth()) || isNaN(date.getDate())) {
+      const [entireDate, time] = item.createDt.split(" ");
+      const [year, month, day] = entireDate.split("-");
+      return `${month}.${day}`;
+    } else {
+      return `${date.getMonth() + 1}.${date.getDate()}`;
+    }
   });
 
   const defCntData = totalDefCntOfWeekData?.map((item) => item.incDec);
