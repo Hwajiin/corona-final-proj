@@ -9,17 +9,17 @@ const GlobalStyle = createGlobalStyle`
     /* Additional Customizing reset CSS */
     * {
         margin: 0;
-        font-family: ${fonts.family};
+        font-family: ${fonts.family.base};
         box-sizing: border-box;
     }
 
     html {
-        font-family: ${fonts.family};
+        font-family: ${fonts.family.base};
         font-size: 16px;
     }
 
     body {
-        font-family: ${fonts.family};
+        font-family: ${fonts.family.base};
         color: ${colors.variable.black};
     }
 

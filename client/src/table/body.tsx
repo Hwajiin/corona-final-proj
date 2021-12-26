@@ -23,6 +23,7 @@ const Td = styled.td`
 
   &:nth-child(3) {
     color: ${colors.variable.red};
+    font-weight: 700;
   }
 
   ${responsive.device["above-tablet"]} {
