@@ -27,7 +27,7 @@ const useGeoData = () => {
   };
 
   const geoError: GeoError = (error) => {
-    console.log(`Error occured. Error code: ${error.code}`);
+    alert(`Error occured. Error code: ${error.code}`);
   };
 
   useEffect(() => {

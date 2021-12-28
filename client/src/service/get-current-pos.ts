@@ -6,7 +6,7 @@ const getCurrentGeolocation = (geoSuccess: GeoSuccess, geoError: GeoError) => {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
   } else {
-    console.log(`Geolocation is not supported for this Browser/OS.`);
+    alert(`Geolocation is not supported for this Browser/OS.`);
   }
 };
 
