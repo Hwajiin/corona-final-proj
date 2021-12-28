@@ -2,14 +2,9 @@
 export type GeoSuccess = (position: GeolocationPosition) => void;
 export type GeoError = (error: GeolocationPositionError) => void;
 
-const geoOptions = {
-  maximumAge: 5 * 60 * 1000,
-  timeout: 10 * 1000,
-};
-
 const getCurrentGeolocation = (geoSuccess: GeoSuccess, geoError: GeoError) => {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(geoSuccess, geoError, geoOptions);
+    navigator.geolocation.getCurrentPosition(geoSuccess, geoError);
   } else {
     console.log(`Geolocation is not supported for this Browser/OS.`);
   }
