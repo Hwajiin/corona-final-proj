@@ -24,9 +24,14 @@ const ContentBox = styled.div`
 `;
 
 const GenDefCovid: React.FC<GenCovidProps> = ({ genAgeCovidData }) => {
-  const genCovidData = genAgeCovidData?.filter(
-    (item) => item.gubun === "여성" || item.gubun === "남성"
-  );
+  let genCovidData;
+  if (genAgeCovidData) {
+    genCovidData = genAgeCovidData?.filter(
+      (item) => item.gubun === "여성" || item.gubun === "남성"
+    );
+  } else {
+    genCovidData = undefined;
+  }
 
   const today = new Date();
   const stdDay = `${today.getFullYear()}년 ${
