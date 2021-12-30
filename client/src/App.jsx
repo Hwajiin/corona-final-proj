@@ -12,8 +12,6 @@ import DefCntOfWeek from "./layouts/defCntOfWeek";
 import DefCntOfToday from "./layouts/defCntOfToday";
 import GenDefCovid from "./layouts/genDefCovid";
 import SidoCovidTable from "./layouts/sidoCovidTable";
-import thumbnail from "./assets/covid19-thumbnail.png";
-import Helmet from "react-helmet";
 
 const SApp = styled.div`
   width: 100%;
@@ -35,40 +33,35 @@ const App = () => {
   const defCntOfTodayData = sidoArray?.slice(0, GUBUN_CNT);
 
   return (
-    <>
-      <Helmet>
-        <meta property="og:image" content={thumbnail} />
-      </Helmet>
-      <SApp>
-        <Header />
-        <Main>
-          <Container>
-            <Row>
-              <Col sm={4} md={6}>
-                <SidoCovid sidoCovidData={geoCovidData} />
-              </Col>
-              <Col sm={4} md={6}>
-                <DefCntOfToday todayCovidData={defCntOfTodayData} />
-              </Col>
-            </Row>
-            <Row>
-              <Col sm={4} md={6}>
-                <DefCntOfWeek weekCovidData={sidoArray} />
-              </Col>
-              <Col sm={4} md={6}>
-                <GenDefCovid genAgeCovidData={genAgeArray} />
-              </Col>
-            </Row>
-            <Row>
-              <Col sm={4}>
-                <SidoCovidTable todayCovidData={defCntOfTodayData} />
-              </Col>
-            </Row>
-          </Container>
-        </Main>
-        <GlobalStyle />
-      </SApp>
-    </>
+    <SApp>
+      <Header />
+      <Main>
+        <Container>
+          <Row>
+            <Col sm={4} md={6}>
+              <SidoCovid sidoCovidData={geoCovidData} />
+            </Col>
+            <Col sm={4} md={6}>
+              <DefCntOfToday todayCovidData={defCntOfTodayData} />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={4} md={6}>
+              <DefCntOfWeek weekCovidData={sidoArray} />
+            </Col>
+            <Col sm={4} md={6}>
+              <GenDefCovid genAgeCovidData={genAgeArray} />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={4}>
+              <SidoCovidTable todayCovidData={defCntOfTodayData} />
+            </Col>
+          </Row>
+        </Container>
+      </Main>
+      <GlobalStyle />
+    </SApp>
   );
 };
 
